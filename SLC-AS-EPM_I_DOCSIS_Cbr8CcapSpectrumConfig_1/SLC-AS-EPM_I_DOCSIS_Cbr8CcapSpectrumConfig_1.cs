@@ -1,6 +1,6 @@
 // Ignore Spelling: Cbr Ccap
 
-namespace SLCASEPMIDOCSISCreateCbr8CcapMeasPoints_1
+namespace SLCASEPMIDOCSISCbr8CcapSpectrumConfig_1
 {
 	using System;
 	using System.Collections.Generic;
