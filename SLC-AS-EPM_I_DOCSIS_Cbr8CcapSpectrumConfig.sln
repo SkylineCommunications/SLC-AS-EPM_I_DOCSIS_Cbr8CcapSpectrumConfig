@@ -37,14 +37,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code Analysis", "Code Analy
 		Internal\Code Analysis\stylecop.json = Internal\Code Analysis\stylecop.json
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SLC-AS-EPM_I_DOCSIS_CreateCbr8CcapMeasPoints", "SLC-AS-EPM_I_DOCSIS_CreateCbr8CcapMeasPoints", "{8E0B3060-852D-4CE1-BCB2-9F309542A99A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig", "SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig", "{8E0B3060-852D-4CE1-BCB2-9F309542A99A}"
 	ProjectSection(SolutionItems) = preProject
-		SLC-AS-EPM_I_DOCSIS_CreateCbr8CcapMeasPoints.xml = SLC-AS-EPM_I_DOCSIS_CreateCbr8CcapMeasPoints.xml
+		SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig.xml = SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig.xml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{BACDCD1A-3776-4780-A83C-33C379C0ED43}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SLC-AS-EPM_I_DOCSIS_CreateCbr8CcapMeasPoints_1", "SLC-AS-EPM_I_DOCSIS_CreateCbr8CcapMeasPoints_1\SLC-AS-EPM_I_DOCSIS_CreateCbr8CcapMeasPoints_1.csproj", "{690D10BC-683F-4B57-961F-D4064B9CF6B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfigs_1", "SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig_1\SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig_1.csproj", "{690D10BC-683F-4B57-961F-D4064B9CF6B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

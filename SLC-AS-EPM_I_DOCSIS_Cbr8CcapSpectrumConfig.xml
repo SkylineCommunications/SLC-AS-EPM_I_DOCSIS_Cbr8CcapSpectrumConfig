@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <DMSScript options="272" xmlns="http://www.skyline.be/automation">
-	<Name>SLC-AS-EPM_I_DOCSIS_CreateCbr8CcapMeasPoints</Name>
+	<Name>SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig</Name>
 	<Description>
 		<![CDATA[Automation script used to create the Measurement Points corresponding to each port belonging to all elements
 running the CISCO CBR-8 CCAP UTSC connector on its Production version.]]>
@@ -21,7 +21,7 @@ running the CISCO CBR-8 CCAP UTSC connector on its Production version.]]>
 
 	<Script>
 		<Exe id="1" type="csharp">
-			<Value><![CDATA[[Project:SLC-AS-EPM_I_DOCSIS_CreateCbr8CcapMeasPoints_1]]]></Value>
+			<Value><![CDATA[[Project:SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig_1]]]></Value>
 			<!--<Param type="debug">true</Param>-->
 			<Message></Message>
 		</Exe>
