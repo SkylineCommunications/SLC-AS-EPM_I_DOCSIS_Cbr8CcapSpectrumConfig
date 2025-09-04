@@ -9,6 +9,7 @@
     <Import_RootNamespace>LibraryProject</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\Cbr8CcapParams.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Container.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ElementConfig.cs" />

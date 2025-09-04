@@ -1,7 +1,8 @@
 ﻿namespace LibraryProject.Helpers
 {
 	using System.Collections.Generic;
-	using Newtonsoft.Json;
+    using LibraryProject.Extensions;
+    using Newtonsoft.Json;
 	using Skyline.DataMiner.Core.DataMinerSystem.Common;
 
 	public sealed class ElementConfig

@@ -120,6 +120,9 @@ namespace SLCASEPMIDOCSISCbr8CcapSpectrumConfig_1
 
             monitors
                 .Create(elements);
+
+            monitors.RemoveDeprecatedMonitors(
+                elements);
         }
     }
 }
