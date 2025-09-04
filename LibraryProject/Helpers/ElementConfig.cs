@@ -1,10 +1,12 @@
 ﻿namespace LibraryProject.Helpers
 {
+	using System;
 	using System.Collections.Generic;
+	using LibraryProject.Extensions;
 	using Newtonsoft.Json;
 	using Skyline.DataMiner.Core.DataMinerSystem.Common;
 
-	public sealed class ElementConfig
+    public sealed class ElementConfig
     {
         public ElementConfig(
             IDmsElement element)
@@ -17,14 +19,9 @@
 
             var rawInterfaces = MiscExt.GetValue<string>(
                 element,
-                (int)Cbr8CcapParams.InterfacesList)
-                ?.Split(';');
+                (int)Cbr8CcapParams.InterfacesList);
 
-            if (rawInterfaces != null)
-            {
-                foreach (var item in rawInterfaces)
-                    Interfaces.Add(item);
-            }
+            Interfaces = ParseInterfaces(rawInterfaces);
         }
 
         [JsonIgnore]
@@ -32,8 +29,24 @@
 
         public string Name => Config?.Name;
 
-        public HashSet<string> Interfaces { get; } = new HashSet<string>();
+        public IReadOnlyCollection<string> Interfaces { get; }
 
         public int? Interval { get; }
+
+        private static IReadOnlyCollection<string> ParseInterfaces(string raw)
+        {
+            if (string.IsNullOrWhiteSpace(raw))
+                return Array.Empty<string>();
+
+            var set = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+            foreach (var s in raw.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                if (s.Length > 0)
+                    set.Add(s);
+            }
+
+            return set;
+        }
     }
 }

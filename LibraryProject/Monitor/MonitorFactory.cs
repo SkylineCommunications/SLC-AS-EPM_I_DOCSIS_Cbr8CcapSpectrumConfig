@@ -106,6 +106,46 @@
             }
         }
 
+        public void RemoveDeprecatedMonitors(
+            IReadOnlyCollection<ElementConfig> elements)
+        {
+            foreach (var element in elements)
+            {
+                var validNames = new HashSet<string>(
+                    element.Interfaces.Select(n => $"{element.Config.Name}_{n}"));
+
+                // find monitors for this element that are not in the validNames set
+                var deprecatedMonitors = Entities
+                    .Where(
+                        m =>
+                        m.DmsIdentifier == element.Config.DmsElementId.Value &&
+                        !validNames.Contains(m.Name))
+                    .ToList();
+
+                foreach (var monitor in deprecatedMonitors)
+                {
+                    try
+                    {
+                        Logger.Info(
+                            $"[REMOVING Deprecated Monitor] ({element.Config.Name}) Name: {monitor.Name} | ID: {monitor.Id}");
+
+                        element
+                            .Config
+                            .SpectrumAnalyzer
+                            .Monitors
+                            .DeleteMonitor(Convert.ToInt32(monitor.Id));
+
+                        Entities.Remove(monitor);
+                    }
+                    catch (Exception e)
+                    {
+                        Logger.Error(
+                            $"Unable to remove deprecated monitor '{monitor.Name}'\n\t{e}");
+                    }
+                }
+            }
+        }
+
         private void UpdateMonitor(
             MonitorEntry existingMonitor,
             ElementConfig element,
