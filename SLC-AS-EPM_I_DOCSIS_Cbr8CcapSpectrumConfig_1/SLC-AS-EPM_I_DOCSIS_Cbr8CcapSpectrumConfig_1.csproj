@@ -14,8 +14,10 @@
   </PropertyGroup>
   <PropertyGroup>
     <DefineConstants>$(DefineConstants);DCFv1;DBInfo;ALARM_SQUASHING</DefineConstants>
+    <AssemblyVersion>2025.0903.2153.03783</AssemblyVersion>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Skyline.DataMiner.Core.DataMinerSystem.Automation" Version="1.1.2.2" />
     <PackageReference Include="Skyline.DataMiner.Dev.Automation" Version="10.2.0.25" />
     <PackageReference Include="Skyline.DataMiner.Utils.SecureCoding.Analyzers" Version="2.1.0">
@@ -28,4 +30,5 @@
       <UserProperties DisLinkedXmlFile="..\SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig.xml" DisProjectType="automationScriptProject" DisLinkId="1" />
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="..\LibraryProject\LibraryProject.projitems" Label="Shared" />
 </Project>

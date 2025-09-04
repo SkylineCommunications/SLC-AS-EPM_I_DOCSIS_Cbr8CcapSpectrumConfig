@@ -44,7 +44,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SLC-AS-EPM_I_DOCSIS_Cbr8Cca
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{BACDCD1A-3776-4780-A83C-33C379C0ED43}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfigs_1", "SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig_1\SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig_1.csproj", "{690D10BC-683F-4B57-961F-D4064B9CF6B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig_1", "SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig_1\SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig_1.csproj", "{690D10BC-683F-4B57-961F-D4064B9CF6B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LibraryProject", "LibraryProject\LibraryProject.shproj", "{D4D436AA-58C1-46C2-BDDC-69E01E5A9E26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,8 +70,13 @@ Global
 		{8E0B3060-852D-4CE1-BCB2-9F309542A99A} = {4A940D34-1058-4052-99FA-10F9B5833B69}
 		{BACDCD1A-3776-4780-A83C-33C379C0ED43} = {8E0B3060-852D-4CE1-BCB2-9F309542A99A}
 		{690D10BC-683F-4B57-961F-D4064B9CF6B0} = {BACDCD1A-3776-4780-A83C-33C379C0ED43}
+		{D4D436AA-58C1-46C2-BDDC-69E01E5A9E26} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {631CD206-BAD8-4780-8264-105FCDB18940}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		LibraryProject\LibraryProject.projitems*{690d10bc-683f-4b57-961f-d4064b9cf6b0}*SharedItemsImports = 5
+		LibraryProject\LibraryProject.projitems*{d4d436aa-58c1-46c2-bddc-69e01e5a9e26}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

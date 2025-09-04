@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>d4d436aa-58c1-46c2-bddc-69e01e5a9e26</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>LibraryProject</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Container.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ElementConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\IEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\MiscExt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logger\EngineLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logger\ILogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MeasPoint\MeasPointEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MeasPoint\MeasPointFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Monitor\MonitorEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Monitor\MonitorFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Spectrum\SpectrumFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Spectrum\SpectrumScriptEntry.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
+  </ItemGroup>
+</Project>
