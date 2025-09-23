@@ -1,13 +1,14 @@
 ﻿namespace LibraryProject.Helpers
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using Skyline.DataMiner.Automation;
-	using Skyline.DataMiner.Core.DataMinerSystem.Automation;
-	using Skyline.DataMiner.Core.DataMinerSystem.Common;
+    using Skyline.DataMiner.Automation;
+    using Skyline.DataMiner.Core.DataMinerSystem.Automation;
+    using Skyline.DataMiner.Core.DataMinerSystem.Common;
+    using System;
+    using System.Collections.Generic;
+    using System.Globalization;
+    using System.Linq;
 
-	public static class MiscExt
+    public static class MiscExt
     {
         public static T GetValue<T>(
             IDmsElement element,
@@ -29,10 +30,19 @@
                     x.Protocol.Name.Equals(Constants.CiscoProtocol) &&
                     x.Protocol.Version.Equals("Production"));
 
+            // monitor interval
+            var rawMonitorInterval = engine
+                .GetScriptParam(2)
+                .Value;
+
+            int inputMonitorInterval = ParseInputMonitorInterval(
+                rawMonitorInterval);
+
             foreach (var ciscoElement in ciscoElements)
             {
                 yield return new ElementConfig(
-                    ciscoElement);
+                    ciscoElement,
+                    inputMonitorInterval);
             }
         }
 
@@ -46,6 +56,26 @@
                 @interface);
 
             return t;
+        }
+
+        private static int ParseInputMonitorInterval(
+            string raw,
+            int defaultValue = -1)
+        {
+            if (string.IsNullOrWhiteSpace(raw))
+            {
+                return defaultValue;
+            }
+
+            if (!int.TryParse(raw, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value))
+            {
+                throw new FormatException(
+                    $"Invalid monitor interval: '{raw}'");
+            }
+
+            return value > 0 ?
+                value :
+                defaultValue;
         }
     }
 }

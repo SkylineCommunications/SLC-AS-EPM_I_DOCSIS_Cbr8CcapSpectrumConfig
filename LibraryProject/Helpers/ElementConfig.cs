@@ -1,21 +1,29 @@
 ﻿namespace LibraryProject.Helpers
 {
-	using System;
-	using System.Collections.Generic;
-	using LibraryProject.Extensions;
-	using Newtonsoft.Json;
-	using Skyline.DataMiner.Core.DataMinerSystem.Common;
+    using System;
+    using System.Collections.Generic;
+    using LibraryProject.Extensions;
+    using Newtonsoft.Json;
+    using Skyline.DataMiner.Core.DataMinerSystem.Common;
 
     public sealed class ElementConfig
     {
         public ElementConfig(
-            IDmsElement element)
+            IDmsElement element,
+            int monitorInterval)
         {
             Config = element;
 
-            Interval = MiscExt.GetValue<int?>(
-                element,
-                (int)Cbr8CcapParams.FreeRunDuration) + 10; // + safe delay
+            if (monitorInterval == -1)
+            {
+                Interval = MiscExt.GetValue<int?>(
+                    element,
+                    (int)Cbr8CcapParams.FreeRunDuration) + 10; // + safe delay
+            }
+            else
+            {
+                Interval = monitorInterval;
+            }
 
             var rawInterfaces = MiscExt.GetValue<string>(
                 element,

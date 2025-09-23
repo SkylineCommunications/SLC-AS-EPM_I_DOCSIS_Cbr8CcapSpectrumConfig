@@ -36,7 +36,7 @@
                         @interface);
 
                     measPoint.Id = HighestId.ToString();
-                    measPoint.Script = $"{MeasPointScript};#;PARAMETER:1:{element.Config.Name};#;OPTIONS:0;#;DEFER:False;#;CHECKSETS:True";
+                    measPoint.Script = $"{MeasPointScript};#;PARAMETER:1:{element.Config.DmsElementId.Value};#;OPTIONS:0;#;DEFER:False;#;CHECKSETS:True";
 
                     // log
                     Logger.Info(

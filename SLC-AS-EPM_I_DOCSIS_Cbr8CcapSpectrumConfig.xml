@@ -20,6 +20,9 @@ running the CISCO CBR-8 CCAP UTSC connector on its Production version.]]>
 		<ScriptParameter type="string" id="0" values="">
 			<Description>MeasPointScript</Description>
 		</ScriptParameter>
+		<ScriptParameter type="string" id="2" values="">
+			<Description>MonitorInterval</Description>
+		</ScriptParameter>
 	</Parameters>
 
 	<Script>
