@@ -2,8 +2,7 @@
 <DMSScript options="272" xmlns="http://www.skyline.be/automation">
 	<Name>SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig</Name>
 	<Description>
-		<![CDATA[Automation script used to create the Measurement Points corresponding to each port belonging to all elements
-running the CISCO CBR-8 CCAP UTSC connector on its Production version.]]>
+		<![CDATA[Automation script that creates Measurement Points and Monitors for all ports of elements running the CISCO CBR-8 CCAP UTSC connector (Production version)]]>
 	</Description>
 	<Type>Automation</Type>
 	<Author>SCU</Author>

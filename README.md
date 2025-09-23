@@ -1,3 +1,2 @@
 # SLC-AS-EPM_I_DOCSIS_CreateCbr8CcapMeasPoints
-Automation script used to create the Measurement Points corresponding to each port belonging to all elements
-running the CISCO CBR-8 CCAP UTSC connector on its Production version.
+Automation script that creates and maintains Measurement Points and Monitors for each port belonging to all elements running the CISCO CBR-8 CCAP UTSC connector on its Production version. Measurement Points are created based on the configured Measurement Point Script, while Monitors are created (or updated/removed) per port and linked to the appropriate Measurement Point and Spectrum Script.
